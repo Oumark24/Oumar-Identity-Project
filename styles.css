@@ -703,3 +703,22 @@ footer {
   .list-text, .timeline-desc, .ae-desc, .word-text { color: #222; }
   .word-item, .marker, .list-item, .timeline-item { opacity: 1; transform: none; }
 }
+
+
+/* Responsive polish: keep the blueprint grid legible on smaller screens. */
+@media (max-width: 760px) {
+  .hero { min-height: auto; padding: 72px 24px 56px; display: block; }
+  .hero-left { position: relative; z-index: 2; }
+  .hero-right { min-height: 280px; margin-top: 32px; }
+  .hero-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 18px; }
+  .hero-nav a { font-size: 9px; }
+  section { padding: 68px 24px; }
+  .foundation-grid { grid-template-columns: 1fr; gap: 42px; }
+  .interior-grid, .timeline { grid-template-columns: 1fr; }
+  .aesthetic-grid { grid-template-columns: 1fr; }
+  .hero-year, .hero-identity-tag { right: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
